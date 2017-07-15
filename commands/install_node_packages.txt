@@ -1,0 +1,9 @@
+﻿npm install express --save      // para servidor 
+npm install bcrypt-nodejs --save   // encriptacion
+npm install body-parser --save     // parseo de datos
+npm install connect-multiparty --save     // envio de archivos al servidor
+npm install jwt-simple --save     // estandar de Json Web Tockens
+npm install moment --save           // pluggin de jquery moment
+npm install mongoose --save         // ORM
+npm install mongoose-pagination --save   // paginacion
+npm install nodemon --save-dev     // para refrescar el servidor automaticamente en cambios de código
