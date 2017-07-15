@@ -1,0 +1,15 @@
+{
+  "name": "spotify-mean",
+  "version": "1.0.0",
+  "description": "Proyecto de API Rest con NodeJS Angular Mongo Express \u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[C\u001b[C2\u001b[C\u001b[C\u001b[C\u001b[D\u001b[D\u001b[D Mongo Express tipo spotify",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/artchess/Spotifyapp-MEAN.git"
+  },
+  "author": "Arturo Ferreiro Vilchis",
+  "license": "MIT"
+}
