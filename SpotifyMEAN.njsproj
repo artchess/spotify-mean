@@ -29,8 +29,10 @@
     <Folder Include="models\" />
     <Folder Include="controllers\" />
     <Folder Include="middlewares\" />
+    <Folder Include="uploads\" />
     <Folder Include="services\" />
     <Folder Include="routes\" />
+    <Folder Include="uploads\users\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="app.js" />
