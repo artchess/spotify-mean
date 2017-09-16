@@ -36,6 +36,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="app.js" />
+    <Compile Include="controllers\artistCtrl.js" />
     <Compile Include="controllers\userCtrl.js" />
     <Compile Include="index.js" />
     <Compile Include="middlewares\authenticated.js">
@@ -45,6 +46,7 @@
     <Compile Include="models\artist.js" />
     <Compile Include="models\song.js" />
     <Compile Include="models\user.js" />
+    <Compile Include="routes\artistRts.js" />
     <Compile Include="routes\userRts.js" />
     <Compile Include="services\jwt.js">
       <SubType>Code</SubType>
