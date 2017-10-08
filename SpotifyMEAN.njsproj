@@ -23,6 +23,12 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="package.json" />
+    <Content Include="uploads\album\4BfD2f3Rez5nLLqptK2ZSqeg.jpg" />
+    <Content Include="uploads\artist\VOspkpHbMJJzJLgmuhJAtQ5n.jpg" />
+    <Content Include="uploads\artist\X7aFIn5MawRakCcYbThMyMa2.jpg" />
+    <Content Include="uploads\songs\-QHf3PxODn4Jz7Ef3k38dhhG.mp3" />
+    <Content Include="uploads\songs\E2Kfp17UvF5QOObx_UPrt0_o.mp3" />
+    <Content Include="uploads\users\WHFdKM2WgEZaF46qrXi0QPIj.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="commands\" />
@@ -32,11 +38,18 @@
     <Folder Include="uploads\" />
     <Folder Include="services\" />
     <Folder Include="routes\" />
+    <Folder Include="uploads\artist\" />
+    <Folder Include="uploads\album\" />
+    <Folder Include="uploads\songs\" />
     <Folder Include="uploads\users\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="app.js" />
+    <Compile Include="controllers\albumCtrl.js" />
     <Compile Include="controllers\artistCtrl.js" />
+    <Compile Include="controllers\songCtrl.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="controllers\userCtrl.js" />
     <Compile Include="index.js" />
     <Compile Include="middlewares\authenticated.js">
@@ -46,7 +59,13 @@
     <Compile Include="models\artist.js" />
     <Compile Include="models\song.js" />
     <Compile Include="models\user.js" />
+    <Compile Include="routes\albumRts.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="routes\artistRts.js" />
+    <Compile Include="routes\songRts.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="routes\userRts.js" />
     <Compile Include="services\jwt.js">
       <SubType>Code</SubType>
