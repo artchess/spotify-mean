@@ -1,9 +1,22 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.15
+VisualStudioVersion = 15.0.27130.2003
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "SpotifyMEAN", "SpotifyMEAN.njsproj", "{541EA3AA-A52E-49D2-B812-C37F69124F1B}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{03D68F5B-BD8A-44A3-9C1C-AB29A180CE09}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{15B5894D-893B-494F-A5AC-E7C9E6EEF80A}"
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "SpotifyMEAN", "Api\SpotifyMEAN.njsproj", "{541EA3AA-A52E-49D2-B812-C37F69124F1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpotifyClientAngularCli", "Client\SpotifyClientAngularCli\SpotifyClientAngularCli.csproj", "{0A3D248D-24AF-4A30-8EEF-2085487151E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpotifyClientAspNetMVC", "Client\SpotifyClientAspNetMVC\SpotifyClientAspNetMVC.csproj", "{82B2D293-DC4C-443C-83FE-CAF99547CEBB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{602706ED-47DF-4AE1-8CB0-7C14529BE0CF}"
+	ProjectSection(SolutionItems) = preProject
+		Docs\LEEME.txt = Docs\LEEME.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +28,24 @@ Global
 		{541EA3AA-A52E-49D2-B812-C37F69124F1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{541EA3AA-A52E-49D2-B812-C37F69124F1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{541EA3AA-A52E-49D2-B812-C37F69124F1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A3D248D-24AF-4A30-8EEF-2085487151E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A3D248D-24AF-4A30-8EEF-2085487151E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A3D248D-24AF-4A30-8EEF-2085487151E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A3D248D-24AF-4A30-8EEF-2085487151E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82B2D293-DC4C-443C-83FE-CAF99547CEBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82B2D293-DC4C-443C-83FE-CAF99547CEBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82B2D293-DC4C-443C-83FE-CAF99547CEBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82B2D293-DC4C-443C-83FE-CAF99547CEBB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{541EA3AA-A52E-49D2-B812-C37F69124F1B} = {03D68F5B-BD8A-44A3-9C1C-AB29A180CE09}
+		{0A3D248D-24AF-4A30-8EEF-2085487151E6} = {15B5894D-893B-494F-A5AC-E7C9E6EEF80A}
+		{82B2D293-DC4C-443C-83FE-CAF99547CEBB} = {15B5894D-893B-494F-A5AC-E7C9E6EEF80A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ED87B1A7-412A-49CD-B3D2-84F40F35658F}
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,52 @@
+
+Herramientas de Node.js para Visual Studio
+https://www.visualstudio.com/es/vs/node-js/
+
+Angular cli - Asegurarse de tenerlo instalado
+https://cli.angular.io/
+
+
+Integración Angular Cli con ASP.NET MVC
+http://candordeveloper.com/2017/04/12/how-to-use-angular-cli-with-visual-studio-2017/
+
+Ojo, cuando creamos un proyecto con AngularCli, con el fin de que no nos agregue archivos de git si ya los tenemos necesitamos este comando:
+
+ng new candor-sample-ng-cli --routing --skip-git --directory candor-sample-ng-cli
+
+
+Para correr el proyecto SpotifyClientAngularCli desde la linea de comandos:
+ng serve
+
+Para compilarlo, (se compila en la carpeta dest)
+ng build
+
+Para que al compilarlo genere los archivos de Angular en el proyecto MVC
+
+1.- Abrir propiedades en SpotifyClientAspNetMVC
+2.- Ir a la pestaña BultEvents
+3.- Incluir el siguiente código en Pre-build
+		
+		echo "cd $(SolutionDir)Client\SpotifyClientAngularCli" &&^
+		cd "$(SolutionDir)Client\SpotifyClientAngularCli" &&^
+		echo "building Client\SpotifyClientAngularCli" &&^
+		ng build &&^
+		echo 'copy files' &&^
+		xcopy /I /E /Y "$(SolutionDir)Client\SpotifyClientAngularCli\dist" "$(ProjectDir)Scripts\NgApp"
+
+4.- El codigo siguiente creará la carpeta NgApp en el proyecto SpotifyClientAspNetMVC, este copiado de la compilacion debe quedar en packages.json pero del proyecto SpitifyClientAngularCli
+
+	...
+	"copy": "xcopy \"dist\" \"..\\SpotifyClientAspNetMvc\\Scripts\\NgApp\" /i /s /r /y /c",
+    "dist": "npm run build && npm run copy"
+	...
+
+5.- correr en el proyecto SpotifyClientAngularCli el siguiente comando, esto hará que cada que modifiquemos el código se vuelva a compilar la aplicacion de angular y podamos ver los cambios en la aplicacion MVC:
+	
+	npm run dist
+
+6.- Podemos ya correr normalmente SpotifyClientAspNetMVC sin problemas (f5). Si lo preferimos, podemos correr SpotifyClientAngularCli directamente desde la consola con "ng serve"
+para temas de debugueo o problemas de ruteo
+
+Consideraciones para producción:
+
+The biggest issue remaining would be creation of the production build. When Angular CLI builds for production it doesn’t generate as many script files and it embeds some more content in the index.html file. Instead of hand-jamming the production bits into place when you deploy, you may want to update the script that copies the index.html contents into the NgApp.cshtml file, or maybe just copy the files into the root folder of the MVC web app and then the contents don’t need to be modified when moving into the NGApp.cshtml.
