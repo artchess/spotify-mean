@@ -13,7 +13,7 @@ var song_routes = require('./routes/songRts');
 
 
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json({ type: 'application/*+json' })); //convierte a json las peticiones http
+app.use(bodyParser.json()); //convierte a json las peticiones http
 
 // configurar cabeceras http
 app.use((req, res, next) => {

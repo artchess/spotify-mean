@@ -74,6 +74,16 @@
     <Content Include="package-lock.json" />
     <Content Include="package.json" />
     <Content Include="src\assets\.gitkeep" />
+    <Content Include="src\assets\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="src\assets\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="src\assets\bootstrap\css\bootstrap.css" />
+    <Content Include="src\assets\bootstrap\css\bootstrap.min.css" />
+    <Content Include="src\assets\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="src\assets\bootstrap\js\bootstrap.js" />
+    <Content Include="src\assets\bootstrap\js\bootstrap.min.js" />
+    <Content Include="src\assets\bootstrap\js\npm.js" />
+    <Content Include="src\assets\css\styles.css" />
+    <Content Include="src\assets\js\jquery.min.js" />
     <Content Include="src\tsconfig.app.json" />
     <Content Include="src\tsconfig.spec.json" />
     <Content Include="README.md" />
@@ -99,6 +109,12 @@
     <TypeScriptCompile Include="src\app\app.component.spec.ts" />
     <TypeScriptCompile Include="src\app\app.component.ts" />
     <TypeScriptCompile Include="src\app\app.module.ts" />
+    <TypeScriptCompile Include="src\app\models\album.ts" />
+    <TypeScriptCompile Include="src\app\models\artist.ts" />
+    <TypeScriptCompile Include="src\app\models\song.ts" />
+    <TypeScriptCompile Include="src\app\models\user.ts" />
+    <TypeScriptCompile Include="src\app\services\global.ts" />
+    <TypeScriptCompile Include="src\app\services\user.service.ts" />
     <TypeScriptCompile Include="src\environments\environment.prod.ts" />
     <TypeScriptCompile Include="src\environments\environment.ts" />
     <TypeScriptCompile Include="src\main.ts" />
@@ -108,6 +124,19 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\app\components\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\assets\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="src\assets\bootstrap\css\bootstrap-theme.min.css.map" />
+    <Content Include="src\assets\bootstrap\css\bootstrap.css.map" />
+    <Content Include="src\assets\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="src\assets\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="src\assets\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="src\assets\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="src\assets\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
