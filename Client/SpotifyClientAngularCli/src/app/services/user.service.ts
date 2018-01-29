@@ -31,6 +31,17 @@ export class UserService {
       .map(res => res.json());
   }
 
+  register(userToRegister) {
+    //let json = JSON.stringify(userToRegister);
+    //let params = json;
+
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+
+    return this._http
+      .post(this.url + 'register', userToRegister, { headers: headers })
+      .map(res => res.json());
+  }
+
   getIdentity() {
     let identity = JSON.parse(localStorage.getItem('identity'));
 

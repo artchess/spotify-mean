@@ -4,6 +4,7 @@ https://www.visualstudio.com/es/vs/node-js/
 
 Angular cli - Asegurarse de tenerlo instalado
 https://cli.angular.io/
+https://nodemon.io/
 
 
 Integración Angular Cli con ASP.NET MVC
@@ -13,11 +14,13 @@ Ojo, cuando creamos un proyecto con AngularCli, con el fin de que no nos agregue
 
 ng new candor-sample-ng-cli --routing --skip-git --directory candor-sample-ng-cli
 
+para instalar modulos en SpotifyClientAngularCli y SpotifyMEAN
+npm install 
 
 Para correr el proyecto SpotifyClientAngularCli desde la linea de comandos:
 ng serve
 
-Para compilarlo, (se compila en la carpeta dest)
+Para compilarlo, (se compila en la carpeta dist)
 ng build
 
 Para que al compilarlo genere los archivos de Angular en el proyecto MVC

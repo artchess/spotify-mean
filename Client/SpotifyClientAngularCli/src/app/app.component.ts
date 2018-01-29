@@ -11,12 +11,15 @@ import { UserService } from './services/user.service'
 export class AppComponent implements OnInit {
   public title = 'Spotify';
   public user: User;
+  public userRegister: User;
   public identity; // el objeto del usuario logeado
   public token;
   public errorMessage;
+  public alertRegister;
 
   constructor(private _userService: UserService) {
     this.user = new User('', '', '', '', '', 'ROLE_USER', '');
+    this.userRegister = new User('', '', '', '', '', 'ROLE_USER', '');
   }
 
   ngOnInit() {
@@ -53,9 +56,7 @@ export class AppComponent implements OnInit {
               } else {
                 //Crear elemento en el localstorage para tener el token disponible
                 localStorage.setItem('token', token);
-
-                console.log(token);
-                console.log(identity);
+                this.user = new User('', '', '', '', '', 'ROLE_USER', '');
               }
             },
             error => {
@@ -92,4 +93,28 @@ export class AppComponent implements OnInit {
     this.token = null;
   }
 
+  onSubmitRegister() {
+    this._userService.register(this.userRegister).subscribe(
+      response => {
+        let user = response.user;
+        this.userRegister = user;
+
+        if (!user._id) {
+          this.alertRegister = 'error al registrarse';
+        } else {
+          this.alertRegister = 'El registro se ha realizado correctamente, identifícate con ' + this.userRegister.email;
+          this.userRegister = new User('', '', '', '', '', 'ROLE_USER', '');
+        }
+      },
+      error => {
+        var errorMessage = <any>error;
+
+        if (errorMessage != null) {
+          var body = JSON.parse(error._body);
+          this.alertRegister = body.message;
+          console.log(error);
+        }
+      }
+      );
+  }
 }
