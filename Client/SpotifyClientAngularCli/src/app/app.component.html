@@ -1,22 +1,45 @@
 <div *ngIf="identity" class="navigation col-lg-1">
-  <h1>
-    {{title}}
+  <h1 class="head-title">
+    <span class="glyphicon glyphicon-music" aria-hidden="true"></span>
+    <a [routerLink]="['/']">{{title}}</a>
   </h1>
-  <span>
-    {{identity.name}} {{identity.surname}}
-  </span>
-  <span class="btn btn-warning" (click)="logout()">
-    Cerrar sesión
-  </span>
+  <nav id="navigation">
+    <a href="#">
+      <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+      Buscar
+    </a>
+    <a href="#">
+      <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+      Artistas
+    </a>
+    <a href="#">
+      <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+      Albums
+    </a>
+  </nav>
+  <nav id="user_logged">
+    <div class="user-image">
+      <img id="image-logged" src="{{url + 'get-image-user/' +identity.image}}"/>
+    </div>
+    <span id="identity_name">
+      {{identity.name}}
+    </span>
+    <a [routerLink]="['/mis-datos']">
+      <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+      Mis datos
+    </a>
+    <a (click)="logout()" class="btn-loggout">
+      <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+      Salir
+    </a>
+  </nav>
 </div>
-
-<div class="clearfix"></div>
 
 <div *ngIf="identity" class="central col-lg-11">
-  <p>Estas logueado en la aplicación</p>
+  <router-outlet></router-outlet>
 </div>
 
-<div class="col-lg-12" *ngIf="!identity">
+<div class="col-lg-11" *ngIf="!identity">
   <div class="col-lg-6">
     <h1>Identificate</h1>
     <div *ngIf="errorMessage">
@@ -36,7 +59,7 @@
         <label>Contraseña:</label>
         <input type="password" #password="ngModel" name="password" [(ngModel)]="user.password" class="form-control" required="" />
       </p>
-      <input type="submit" value="Entrar" class="btn btn-primary"/>
+      <input type="submit" value="Entrar" class="btn btn-primary" />
     </form>
   </div>
   <div class="col-lg-6">

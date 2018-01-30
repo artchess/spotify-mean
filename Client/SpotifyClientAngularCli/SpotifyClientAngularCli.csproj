@@ -73,6 +73,7 @@
     <Content Include=".editorconfig" />
     <Content Include="package-lock.json" />
     <Content Include="package.json" />
+    <Content Include="src\app\views\user-edit.html" />
     <Content Include="src\assets\.gitkeep" />
     <Content Include="src\assets\bootstrap\css\bootstrap-theme.css" />
     <Content Include="src\assets\bootstrap\css\bootstrap-theme.min.css" />
@@ -84,6 +85,7 @@
     <Content Include="src\assets\bootstrap\js\npm.js" />
     <Content Include="src\assets\css\styles.css" />
     <Content Include="src\assets\js\jquery.min.js" />
+    <Content Include="src\styles.css" />
     <Content Include="src\tsconfig.app.json" />
     <Content Include="src\tsconfig.spec.json" />
     <Content Include="README.md" />
@@ -97,7 +99,6 @@
     <Content Include="src\app\app.component.html" />
     <Content Include="src\favicon.ico" />
     <Content Include="src\index.html" />
-    <Content Include="src\styles.css" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -105,10 +106,11 @@
   <ItemGroup>
     <TypeScriptCompile Include="e2e\app.e2e-spec.ts" />
     <TypeScriptCompile Include="e2e\app.po.ts" />
-    <TypeScriptCompile Include="src\app\app-routing.module.ts" />
     <TypeScriptCompile Include="src\app\app.component.spec.ts" />
     <TypeScriptCompile Include="src\app\app.component.ts" />
     <TypeScriptCompile Include="src\app\app.module.ts" />
+    <TypeScriptCompile Include="src\app\app.routing.ts" />
+    <TypeScriptCompile Include="src\app\components\user-edit.component.ts" />
     <TypeScriptCompile Include="src\app\models\album.ts" />
     <TypeScriptCompile Include="src\app\models\artist.ts" />
     <TypeScriptCompile Include="src\app\models\song.ts" />
@@ -125,9 +127,7 @@
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="src\app\components\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="src\assets\bootstrap\css\bootstrap-theme.css.map" />
     <Content Include="src\assets\bootstrap\css\bootstrap-theme.min.css.map" />

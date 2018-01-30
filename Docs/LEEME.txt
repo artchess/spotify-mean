@@ -17,6 +17,9 @@ ng new candor-sample-ng-cli --routing --skip-git --directory candor-sample-ng-cl
 para instalar modulos en SpotifyClientAngularCli y SpotifyMEAN
 npm install 
 
+Para correr la api en SpotifyMEAN
+nodemon index.js
+
 Para correr el proyecto SpotifyClientAngularCli desde la linea de comandos:
 ng serve
 

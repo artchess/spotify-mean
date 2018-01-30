@@ -98,6 +98,10 @@ function updateUser(req, res) {
     var userId = req.params.id; //id se saca de la url
     var update = req.body;
 
+    if (userId != req.user.sub) { // si el JWT pertenece a un usuario que no es el usuario que vamos a actualizar no le dejo actualizarlo
+        return res.status(500).send({ message: 'No tienes permiso para actualizar este usuario' });
+    }
+
     User.findByIdAndUpdate(userId, update, (err, userUpdated) => {
         if (err) {
             res.status(500).send({ message: 'Error al actualizar el usuario' });
