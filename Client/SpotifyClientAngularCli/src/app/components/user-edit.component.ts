@@ -20,6 +20,8 @@ export class UserEditComponent implements OnInit {
 
   constructor(private _userService: UserService) {
     this.titulo = "Actualizar mis datos";
+
+    //no esta bien obtener los datos del usuario en el constructor pues no se vuelve a ejecutar mas que una vez durante el ciclo de vida de la aplicación
     // localStorage
     this.identity = this._userService.getIdentity();
     this.token = this._userService.getToken();

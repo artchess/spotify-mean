@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 
 import { GLOBAL } from './services/global';
 import { User } from './models/user';
@@ -20,14 +21,14 @@ export class AppComponent implements OnInit {
   public alertRegister;
   public url: string;
 
-  constructor(private _userService: UserService) {
+  constructor(private _route: ActivatedRoute, private _router: Router, private _userService: UserService) {
     this.user = new User('', '', '', '', '', 'ROLE_USER', '');
     this.userRegister = new User('', '', '', '', '', 'ROLE_USER', '');
 
     this.url = GLOBAL.url;
   }
 
-  ngOnInit() {
+  ngOnInit() { // ngOnInit se ejecuta una sola vez en la aplicación y no mas al igual que el constructor, por lo cual no es buena practica obtener la identidad y el token de aqui al parecer
     this.identity = this._userService.getIdentity();
     this.token = this._userService.getToken();
 
@@ -36,8 +37,6 @@ export class AppComponent implements OnInit {
   }
 
   public onSubmit() {
-    console.log(this.user);
-
     //conseguir los datos del usuario identificado
     this._userService.signup(this.user).subscribe(
       resp => {
@@ -96,6 +95,7 @@ export class AppComponent implements OnInit {
 
     this.identity = null;
     this.token = null;
+    this._router.navigate(['/']);
   }
 
   onSubmitRegister() {

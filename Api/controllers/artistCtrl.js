@@ -27,7 +27,7 @@ function getArtist(req, res) {
 
 function getArtists(req, res) {
     var page = req.params.page || 1;
-    var itemsPerPage = 3;
+    var itemsPerPage = 4;
 
     Artist.find().sort('name').paginate(page,
         itemsPerPage,
@@ -91,16 +91,16 @@ function deleteArtist(req, res) {
     var artistId = req.params.id;
 
     Artist.findByIdAndRemove(artistId,
-        (err, artistRemoved) => {
+        (err, artist) => {
             if (err) {
                 res.status(500).send({ message: 'Error al eliminar el artista' });
             } else {
-                if (!artistRemoved) {
+                if (!artist) {
                     res.status(404).send({ message: 'El artista no ha sido eliminado' });
                 } else {
                     // Cuando se elimina el artista borramos todo lo asociado a el
 
-                    Album.find({ artist: artistRemoved._id }).remove((err, albumRemoved) => {
+                    Album.find({ artist: artist._id }).remove((err, albumRemoved) => {
                         if (err) {
                             res.status(500).send({ message: 'Error al eliminar el album' });
                         } else {
@@ -115,7 +115,7 @@ function deleteArtist(req, res) {
                                         if (!songRemoved) {
                                             res.status(404).send({ message: 'La canción no ha sido eliminada' });
                                         } else {
-                                            res.status(200).send({ artistRemoved });
+                                            res.status(200).send({ artist });
 
                                         }
                                     }
