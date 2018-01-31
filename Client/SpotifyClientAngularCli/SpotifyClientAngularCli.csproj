@@ -73,6 +73,7 @@
     <Content Include=".editorconfig" />
     <Content Include="package-lock.json" />
     <Content Include="package.json" />
+    <Content Include="src\app\views\album-add.html" />
     <Content Include="src\app\views\artist-detail.html" />
     <Content Include="src\app\views\artist-add.html" />
     <Content Include="src\app\views\artist-list.html" />
@@ -114,6 +115,7 @@
     <TypeScriptCompile Include="src\app\app.component.ts" />
     <TypeScriptCompile Include="src\app\app.module.ts" />
     <TypeScriptCompile Include="src\app\app.routing.ts" />
+    <TypeScriptCompile Include="src\app\components\album-add.component.ts" />
     <TypeScriptCompile Include="src\app\components\artist-add.component.ts" />
     <TypeScriptCompile Include="src\app\components\artist-detail.component.ts" />
     <TypeScriptCompile Include="src\app\components\artist-edit.component.ts" />
