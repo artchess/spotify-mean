@@ -116,6 +116,7 @@
     <TypeScriptCompile Include="src\app\app.module.ts" />
     <TypeScriptCompile Include="src\app\app.routing.ts" />
     <TypeScriptCompile Include="src\app\components\album-add.component.ts" />
+    <TypeScriptCompile Include="src\app\components\album-edit.component.ts" />
     <TypeScriptCompile Include="src\app\components\artist-add.component.ts" />
     <TypeScriptCompile Include="src\app\components\artist-detail.component.ts" />
     <TypeScriptCompile Include="src\app\components\artist-edit.component.ts" />
@@ -126,6 +127,7 @@
     <TypeScriptCompile Include="src\app\models\artist.ts" />
     <TypeScriptCompile Include="src\app\models\song.ts" />
     <TypeScriptCompile Include="src\app\models\user.ts" />
+    <TypeScriptCompile Include="src\app\services\album.service.ts" />
     <TypeScriptCompile Include="src\app\services\artist.service.ts" />
     <TypeScriptCompile Include="src\app\services\global.ts" />
     <TypeScriptCompile Include="src\app\services\upload.service.ts" />
